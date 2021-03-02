@@ -4,15 +4,19 @@ package io.github.pyrerune.nc1;
 import io.github.pyrerune.nc1.blocks.trees.SoulWoodTree;
 import io.github.pyrerune.nc1.init.BiomeInit;
 import io.github.pyrerune.nc1.init.BlockInit;
+import io.github.pyrerune.nc1.init.FeatureInit;
 import io.github.pyrerune.nc1.init.ItemInit;
+import io.github.pyrerune.nc1.world.gen.feature.BaseTreeFeature;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.placement.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -42,11 +46,12 @@ public final class NorseMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
-        MinecraftForge.EVENT_BUS.addListener(this::serverSetup);
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
+
     }
+
     @SubscribeEvent
     public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
         BiomeInit.registerBiomes();
@@ -61,19 +66,12 @@ public final class NorseMod {
             registry.register(blockItem);
         });
     }
-    public void serverSetup(FMLServerStartingEvent event) {
-        LocateBiomeCommand.register(event.getCommandDispatcher());
-        LOGGER.info("[NC1] Commands Registered");
-    }
     public void clientSetup(FMLClientSetupEvent event) {
 
         RenderTypeLookup.setRenderLayer(BlockInit.SOULWOOD_SAPLING.get(), RenderType.getCutout());
     }
 
     public void commonSetup(FMLCommonSetupEvent args) {
-
-
     }
-
 }
 

@@ -1,16 +1,12 @@
 package io.github.pyrerune.nc1.blocks.trees;
 
-import com.mojang.datafixers.Dynamic;
 import io.github.pyrerune.nc1.init.BlockInit;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.trees.BigTree;
+import io.github.pyrerune.nc1.init.FeatureInit;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
 import net.minecraftforge.common.IPlantable;
-import sun.security.krb5.Config;
 
 import javax.annotation.Nullable;
 import java.util.Random;
@@ -27,7 +23,7 @@ public class SoulWoodTree extends Tree {
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean p_225546_2_) {
-        return Feature.NORMAL_TREE.withConfiguration(SOULWOOD_CONFIG);
+        return FeatureInit.SOUL_WOOD_TREE_FEATURE.withConfiguration(SoulWoodTree.SOULWOOD_CONFIG);
     }
 
 }
