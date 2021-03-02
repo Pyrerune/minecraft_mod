@@ -1,24 +1,15 @@
 package io.github.pyrerune.nc1;
 
 
-import io.github.pyrerune.nc1.blocks.trees.SoulWoodTree;
 import io.github.pyrerune.nc1.init.BiomeInit;
 import io.github.pyrerune.nc1.init.BlockInit;
-import io.github.pyrerune.nc1.init.FeatureInit;
 import io.github.pyrerune.nc1.init.ItemInit;
-import io.github.pyrerune.nc1.world.gen.feature.BaseTreeFeature;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
-import net.minecraft.world.gen.placement.*;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -26,17 +17,15 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartedEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-//TODO Custom Biome
 //TODO Custom Recipes
 //TODO Custom Tools
+//TODO Add LANG
+//TODO Replace apple with smth fun (leaves loot table)
 @Mod("nc1")
 @Mod.EventBusSubscriber(modid = NorseMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class NorseMod {
@@ -68,7 +57,7 @@ public final class NorseMod {
     }
     public void clientSetup(FMLClientSetupEvent event) {
 
-        RenderTypeLookup.setRenderLayer(BlockInit.SOULWOOD_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.IRON_WOOD_SAPLING.get(), RenderType.getCutout());
     }
 
     public void commonSetup(FMLCommonSetupEvent args) {

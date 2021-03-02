@@ -1,9 +1,7 @@
 package io.github.pyrerune.nc1.world.gen.feature;
 
 import com.mojang.datafixers.Dynamic;
-import io.github.pyrerune.nc1.blocks.SoulCursedGrassBlock;
-import jdk.nashorn.internal.ir.Block;
-import net.minecraft.util.Direction;
+import io.github.pyrerune.nc1.blocks.CursedGrassBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.IBlockReader;
@@ -36,7 +34,7 @@ public class BaseTreeFeature extends AbstractSmallTreeFeature<TreeFeatureConfig>
 
         if(blockpos.getY() < generationReader.getMaxHeight() - i - 1) {
             if(generationReader instanceof IBlockReader) {
-                if (generationReader.hasBlockState(blockpos.down(), state -> state.getBlock() instanceof SoulCursedGrassBlock)) {//state.canSustainPlant((net.minecraft.world.IBlockReader)generationReader, blockpos, Direction.UP, configIn.getSapling()))) {
+                if (generationReader.hasBlockState(blockpos.down(), state -> state.getBlock() instanceof CursedGrassBlock)) {
                     optional = Optional.of(blockpos);
                 } else {
                     optional = Optional.empty();

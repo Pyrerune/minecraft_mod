@@ -6,9 +6,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.ResourceLocation;
 
-public class SoulCursedGrassBlock extends Block {
+public class CursedGrassBlock extends Block {
 
-    public SoulCursedGrassBlock() {
+    public CursedGrassBlock() {
         super(Block.Properties.create(Material.ORGANIC, MaterialColor.DIRT).hardnessAndResistance(2.0F, 1200.0F));
 
     }

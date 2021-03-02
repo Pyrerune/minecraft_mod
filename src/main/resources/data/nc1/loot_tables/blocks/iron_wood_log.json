@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "nc1:soul_wood_log"
+          "name": "nc1:iron_wood_log"
         }
       ],
       "conditions": [

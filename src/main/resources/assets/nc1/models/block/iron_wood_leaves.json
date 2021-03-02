@@ -1,6 +1,6 @@
 {
   "parent": "block/leaves",
   "textures": {
-    "all": "nc1:block/soul_wood_leaves"
+    "all": "nc1:block/iron_wood_leaves"
   }
 }

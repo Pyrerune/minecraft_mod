@@ -1,0 +1,7 @@
+{   "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "block/dirt",
+    "top": "nc1:block/cursed_dirt_top",
+    "side": "nc1:block/cursed_dirt_side"
+  }
+}

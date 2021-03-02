@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "nc1:block/soul_wood_log_top",
-    "side": "nc1:block/soul_wood_log"
-  }
-}

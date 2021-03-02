@@ -11,19 +11,19 @@ import net.minecraftforge.common.IPlantable;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class SoulWoodTree extends Tree {
+public class IronWoodTree extends Tree {
 
 
-    public static final TreeFeatureConfig SOULWOOD_CONFIG = (new TreeFeatureConfig.Builder(
-            new SimpleBlockStateProvider(BlockInit.SOULWOOD_LOG.get().getDefaultState()),
-            new SimpleBlockStateProvider(BlockInit.SOULWOOD_LEAVES.get().getDefaultState()),
-    new BlobFoliagePlacer(3,0))).baseHeight(10).heightRandA(3).foliageHeight(3).ignoreVines().setSapling((IPlantable) BlockInit.SOULWOOD_SAPLING.get()).build();
+    public static final TreeFeatureConfig IRON_WOOD_CONFIG = (new TreeFeatureConfig.Builder(
+            new SimpleBlockStateProvider(BlockInit.IRON_WOOD_LOG.get().getDefaultState()),
+            new SimpleBlockStateProvider(BlockInit.IRON_WOOD_LEAVES.get().getDefaultState()),
+    new BlobFoliagePlacer(3,0))).baseHeight(10).heightRandA(3).foliageHeight(3).ignoreVines().setSapling((IPlantable) BlockInit.IRON_WOOD_SAPLING.get()).build();
 
 
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean p_225546_2_) {
-        return FeatureInit.SOUL_WOOD_TREE_FEATURE.withConfiguration(SoulWoodTree.SOULWOOD_CONFIG);
+        return FeatureInit.IRON_WOOD_TREE_FEATURE.withConfiguration(IronWoodTree.IRON_WOOD_CONFIG);
     }
 
 }

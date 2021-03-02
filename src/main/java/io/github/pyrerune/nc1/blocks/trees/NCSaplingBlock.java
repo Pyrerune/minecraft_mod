@@ -1,5 +1,6 @@
 package io.github.pyrerune.nc1.blocks.trees;
 
+import io.github.pyrerune.nc1.init.BlockInit;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.state.IntegerProperty;
@@ -68,5 +69,10 @@ public class NCSaplingBlock extends BushBlock implements IGrowable {
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(STAGE);
+    }
+    @Override
+    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        Block block = state.getBlock();
+        return block == BlockInit.CURSED_GRASS.get() || block == BlockInit.CURSED_DIRT.get();
     }
 }
