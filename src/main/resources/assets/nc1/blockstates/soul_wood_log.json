@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y":  { "model": "nc1:block/soul_wood_log" },
+    "axis=z":   { "model": "nc1:block/soul_wood_log", "x": 90 },
+    "axis=x":   { "model": "nc1:block/soul_wood_log", "x": 90, "y": 90 }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "nc1:block/soul_wood_sapling"
+  }
+}
