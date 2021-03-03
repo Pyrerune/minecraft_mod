@@ -23,8 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 //TODO Custom Recipes
-//TODO Custom Tools
-//TODO Add LANG
+//TODO Finish Tools
 //TODO Replace apple with smth fun (leaves loot table)
 @Mod("nc1")
 @Mod.EventBusSubscriber(modid = NorseMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)

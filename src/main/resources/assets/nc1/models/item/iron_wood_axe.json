@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "nc1:item/iron_wood_axe"
+  }
+}
