@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "Y"
+  ],
+  "key": {
+    "Y":{
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "nc1:iron_wood_planks"
+    }
+  },
+  "result": {
+    "item": "nc1:iron_wood_sword"
+  }
+}

@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 
 //TODO Custom Recipes
 //TODO Finish Tools
+//TODO Replace Sword Crafting Recipe
 //TODO Replace apple with smth fun (leaves loot table)
 @Mod("nc1")
 @Mod.EventBusSubscriber(modid = NorseMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
