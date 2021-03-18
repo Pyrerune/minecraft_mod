@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "nc1:iron_wood_planks"
+    },
+    "Y": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "result": {
+    "item": "nc1:cursed_shovel_casing"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nc1:cursed_axe_casing"
+    },
+    {
+      "item": "minecraft:diamond_axe"
+    }
+  ],
+  "result": {
+    "item": "nc1:iron_wood_axe"
+  }
+}

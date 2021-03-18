@@ -22,10 +22,12 @@ import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-//TODO Custom Recipes
-//TODO Finish Tools
-//TODO Replace Sword Crafting Recipe
+
 //TODO Replace apple with smth fun (leaves loot table)
+//TODO add cursed tools
+//TODO add entities
+//TODO custom enchants?
+//TODO custom ItemGroup
 @Mod("nc1")
 @Mod.EventBusSubscriber(modid = NorseMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class NorseMod {

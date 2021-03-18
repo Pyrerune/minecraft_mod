@@ -1,18 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X",
-    "X",
-    "Y"
-  ],
-  "key": {
-    "Y":{
-      "item": "minecraft:stick"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nc1:cursed_sword_casing"
     },
-    "X": {
-      "item": "nc1:iron_wood_planks"
+    {
+      "item": "minecraft:diamond_sword"
     }
-  },
+  ],
   "result": {
     "item": "nc1:iron_wood_sword"
   }
