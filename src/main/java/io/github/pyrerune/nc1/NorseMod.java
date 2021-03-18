@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,10 +25,9 @@ import org.apache.logging.log4j.Logger;
 
 
 //TODO Replace apple with smth fun (leaves loot table)
-//TODO add cursed tools
 //TODO add entities
 //TODO custom enchants?
-//TODO custom ItemGroup
+//TODO custom dimension
 @Mod("nc1")
 @Mod.EventBusSubscriber(modid = NorseMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class NorseMod {
@@ -40,7 +40,6 @@ public final class NorseMod {
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
-
     }
 
     @SubscribeEvent
@@ -51,11 +50,13 @@ public final class NorseMod {
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(ItemGroup.MISC);
+            final Item.Properties properties = new Item.Properties().group(ItemInit.NC_ITEM_GROUP);
             final BlockItem blockItem = new BlockItem(block, properties);
             blockItem.setRegistryName(block.getRegistryName());
             registry.register(blockItem);
         });
+        ItemInit.NC_ITEM_GROUP.setIcon(new ItemStack(BlockInit.IRON_WOOD_SAPLING.get()));
+
     }
     public void clientSetup(FMLClientSetupEvent event) {
 

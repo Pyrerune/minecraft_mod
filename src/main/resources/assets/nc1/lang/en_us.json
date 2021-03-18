@@ -10,5 +10,11 @@
   "item.nc1.iron_wood_pickaxe": "Iron Wood Pickaxe",
   "item.nc1.iron_wood_hoe": "Iron Wood Hoe",
   "item.nc1.iron_wood_sword": "Iron Wood Sword",
-  "item.nc1.iron_wood_shovel": "Iron Wood Shovel"
+  "item.nc1.iron_wood_shovel": "Iron Wood Shovel",
+  "item.nc1.cursed_hoe_casing": "Cursed Hoe Casing",
+  "item.nc1.cursed_pickaxe_casing": "Cursed Pickaxe Casing",
+  "item.nc1.cursed_shovel_casing": "Cursed Shovel Casing",
+  "item.nc1.cursed_sword_casing": "Cursed Sword Casing",
+  "item.nc1.cursed_axe_casing": "Cursed Axe Casing",
+  "itemGroup.nc1": "Norse Mod"
 }
