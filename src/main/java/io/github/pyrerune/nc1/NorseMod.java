@@ -3,6 +3,7 @@ package io.github.pyrerune.nc1;
 
 import io.github.pyrerune.nc1.init.BiomeInit;
 import io.github.pyrerune.nc1.init.BlockInit;
+import io.github.pyrerune.nc1.init.EntityInit;
 import io.github.pyrerune.nc1.init.ItemInit;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -24,9 +25,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-//TODO Replace apple with smth fun (leaves loot table)
-//TODO add entities
+
+//TODO fix entities
 //TODO custom enchants?
+//TODO Replace apple with smth fun (leaves loot table)
 //TODO custom dimension
 @Mod("nc1")
 @Mod.EventBusSubscriber(modid = NorseMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -40,6 +42,7 @@ public final class NorseMod {
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
+        EntityInit.ENTITY_TYPES.register(modEventBus);
     }
 
     @SubscribeEvent
